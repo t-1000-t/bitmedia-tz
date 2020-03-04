@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.reader {
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  margin: auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}

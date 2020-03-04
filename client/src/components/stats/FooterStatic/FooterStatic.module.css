@@ -1,0 +1,42 @@
+.wrpFooter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #1c3b55;
+  margin-top: 20px;
+}
+
+.appco {
+  display: flex;
+  justify-content: space-between;
+  width: 1180px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.appCoFont {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.ThemeTagsFont {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 142%;
+  color: #ffffff;
+}
+
+.copyrightsFont {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 142%;
+  color: #ffffff;
+}
