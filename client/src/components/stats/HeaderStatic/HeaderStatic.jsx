@@ -7,7 +7,7 @@ function HeaderStatic() {
   return (
     <div className={wrpHeader}>
       <div className={appco}>
-        <snap className={appCoFont}>AppCo</snap>
+        <p className={appCoFont}>AppCo</p>
       </div>
     </div>
   );

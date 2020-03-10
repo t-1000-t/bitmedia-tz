@@ -10,7 +10,7 @@
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -25,20 +25,46 @@ caption {
   margin: 1em auto;
 }
 
+.linkColor {
+  color: #cccccc;
+}
+
+.boxLink {
+  padding-top: 10px;
+}
+
 .wrapperTable {
-  /* overflow-y: hidden; */
   overflow-y: scroll;
 }
 
 .statistic {
   width: 100%;
   text-align: left;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
   line-height: 39px;
   color: #1a1a1a;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.rowThead {
+  height: 48px;
+}
+.fontTh {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
 }
 
 th,

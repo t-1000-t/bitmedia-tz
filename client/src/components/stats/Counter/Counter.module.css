@@ -1,3 +1,8 @@
+button::-moz-focus-outer {
+  border: 0;
+  padding: 0;
+}
+
 .boxCounter {
   display: flex;
   flex-direction: row;
@@ -5,14 +10,55 @@
   padding-top: 20px;
 }
 
-.counter {
+.pageItem {
+  display: inline-block;
+  border: 1px solid #3a80ba;
+  background-color: #3a80ba;
+  color: #fff;
+  padding-top: 15px;
+  padding-left: 12px;
+  padding-bottom: 15px;
+  padding-right: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.pageItemDisable {
+  display: inline-block;
+  border: 1px solid #f1f1f1;
+  background-color: #fff;
+  color: #1a1a1a;
+  padding-top: 15px;
+  padding-left: 12px;
+  padding-bottom: 15px;
+  padding-right: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.disableCursorPointer {
+  display: inline-block;
+  border: 1px solid #f1f1f1;
+  background-color: #fff;
+  color: #f1f1f1;
+  padding-top: 15px;
+  padding-left: 12px;
+  padding-bottom: 15px;
+  padding-right: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.liNum {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  width: 335px;
-  font-weight: 400;
-  font-size: 24px;
-  margin-bottom: 16px;
-  padding-left: 160px;
-  padding-right: 160px;
+  width: 40px;
+  height: 25px;
 }
 
 .listNum {
@@ -29,8 +75,23 @@
   cursor: pointer;
   margin-top: 20px;
   background-color: #fff;
-
   z-index: 5;
+}
+
+.slider_btn_right_disable {
+  width: 48px;
+  height: 48px;
+  opacity: 0.651;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #fff;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.slider_btn_right:focus {
+  outline: none;
 }
 
 .arrow_right {
@@ -57,6 +118,7 @@
   border-right: 3px solid #f1f1f1;
   border-bottom: 3px solid #f1f1f1;
   transform: rotate(315deg);
+  pointer-events: none;
 }
 
 .slider_btn_left {
@@ -66,15 +128,31 @@
   opacity: 0.651;
   border: none;
   cursor: pointer;
-
   background-color: #fff;
   z-index: 5;
 }
+
+.slider_btn_left_disable {
+  margin-top: 20px;
+  width: 48px;
+  height: 48px;
+  opacity: 0.651;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.slider_btn_left:focus {
+  outline: none;
+}
+
 .arrow_left {
   display: inline-block;
   position: relative;
   top: 10%;
-  left: 40%;
+  left: 30%;
   width: 16px;
   height: 16px;
   background: transparent;
@@ -94,88 +172,5 @@
   border-right: 3px solid #f1f1f1;
   border-bottom: 3px solid #f1f1f1;
   transform: rotate(135deg);
+  pointer-events: none;
 }
-/* .slider_wrp {
-  width: 1440px;
-  margin: auto;
-  position: absolute;
-  top: 78px;
-  left: 0;
-  bottom: 280px;
-  right: 0;
-  z-index: 10;
-  background-color: rgb(73, 124, 107);
-}
-
-.arrow_right {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-left: 10px;
-  margin-top: 10px;
-  background: transparent;
-  border-right: 3px solid #f1f1f1;
-  border-bottom: 3px solid #f1f1f1;
-  z-index: 0;
-}
-.arrow_left {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background: transparent;
-  border-right: 3px solid #f1f1f1;
-  border-bottom: 3px solid #f1f1f1;
-  margin-left: 10px;
-  margin-top: 10px;
-  border-radius: 0 3px 0 3px;
-  z-index: 0;
-}
-
-.slider_btn_right {
-  margin-left: 15px;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  border: none;
-  right: 548px;
-  top: 15px;
-  opacity: 1;
-  background-color: #fff;
-  cursor: pointer;
-  transform: rotate(-45deg);
-  z-index: 10;
-}
-.slider_btn_left {
-  margin-left: 15px;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  border: none;
-  left: 548px;
-  top: 15px;
-  opacity: 1;
-  cursor: pointer;
-  transform: rotate(-225deg);
-  z-index: 10;
-  background-color: #fff;
-}
-
-.slider_btn_right:hover .arrow_right {
-  border-right: 3px solid #3a80ba;
-  border-bottom: 3px solid #3a80ba;
-  opacity: 1;
-  z-index: 0;
-}
-
-.slider_btn_left:hover .arrow_left {
-  border-right: 3px solid #3a80ba;
-  border-bottom: 3px solid #3a80ba;
-  opacity: 1;
-  z-index: 0;
-}
-
-.boxCounter {
-  background-color: lawngreen;
-  z-index: 0;
-} */
-/*  */

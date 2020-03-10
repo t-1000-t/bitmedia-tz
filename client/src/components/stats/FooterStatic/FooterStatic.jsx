@@ -7,9 +7,9 @@ function HeaderStatic() {
   return (
     <div className={wrpFooter}>
       <div className={appco}>
-        <snap className={appCoFont}>AppCo</snap>
-        <snap className={ThemeTagsFont}>All rights reserved by ThemeTags</snap>
-        <snap className={copyrightsFont}>Copyrights &copy; 2019</snap>
+        <p className={appCoFont}>AppCo</p>
+        <p className={ThemeTagsFont}>All rights reserved by ThemeTags</p>
+        <p className={copyrightsFont}>Copyrights &copy; 2019</p>
       </div>
     </div>
   );

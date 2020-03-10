@@ -1,9 +1,17 @@
 import React, { Component } from "react";
 import T from "prop-types";
 import styles from "./Publication.module.css";
-import statsUsersFetch from "../../../services/statsUsersFetch";
+import fullStatisticsFetch from "../../../services/fullStatisticsFetch";
 
-const { wrapperPublish, generic, statistic, wrapperTable } = styles;
+const {
+  wrapperPublish,
+  generic,
+  wrapperTable,
+  linkColor,
+  boxLink,
+  statistic,
+  rowThead
+} = styles;
 
 class Publication extends Component {
   state = {
@@ -11,7 +19,7 @@ class Publication extends Component {
   };
 
   statsFetch = () => {
-    statsUsersFetch.usersFetch().then(data => {
+    fullStatisticsFetch.statisticFetch().then(data => {
       this.setState({
         publications: data
       });
@@ -34,10 +42,16 @@ class Publication extends Component {
 
     return (
       <div className={wrapperPublish}>
-        <caption className={statistic}>User statistic</caption>
+        <div className={boxLink}>
+          <a className={linkColor} href="">
+            Main page &gt;
+          </a>
+          <a href=""> User statistics</a>
+        </div>
+        <caption className={statistic}>User statistics</caption>
         <div className={wrapperTable}>
           <table className={generic}>
-            <thead>
+            <thead className={rowThead}>
               <tr>
                 <th>Id</th>
                 <th>First Name</th>
@@ -59,8 +73,8 @@ class Publication extends Component {
                     <td data-column="Email">{elem.email}</td>
                     <td data-column="Gender">{elem.gender}</td>
                     <td data-column="IP address">{elem.ip_address}</td>
-                    <td data-column="Total click">{elem.ip_address}</td>
-                    <td data-column="Total page views">{elem.ip_address}</td>
+                    <td data-column="Total click">{elem.clicks}</td>
+                    <td data-column="Total page views">{elem.page_views}</td>
                   </tr>
                 ))}
             </tbody>

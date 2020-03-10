@@ -1,0 +1,251 @@
+@media (min-width: 1366px) {
+  .container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: auto;
+    width: 85%;
+    max-height: 805px;
+    background-color: aqua;
+  }
+
+  .logo {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 220%;
+    line-height: 150%;
+    width: 15%;
+    z-index: 5;
+    color: #fff;
+  }
+
+  .wrappStorm {
+    width: 34%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+
+    z-index: 5;
+  }
+
+  .stormingFont {
+    font-family: "Montserrat", sans-serif;
+    font-style: bold;
+    font-weight: bold;
+    font-size: 280%;
+    line-height: 110%;
+
+    color: #ffffff;
+  }
+
+  .desiredFont {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 280%;
+    line-height: 110%;
+    z-index: 5;
+
+    color: #ffffff;
+  }
+
+  .ourFont {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 130%;
+    line-height: 142%;
+
+    color: #ffffff;
+  }
+
+  .wrappOur {
+    width: 40%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    z-index: 5;
+  }
+
+  .wrappBtnStat {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 10%;
+    z-index: 5;
+  }
+
+  .btnStat {
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+    color: #3a80ba;
+    width: 90%;
+    height: 200%;
+    border: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    line-height: 142%;
+    z-index: 5;
+  }
+  .btnStat:focus {
+    outline: none;
+    z-index: 5;
+  }
+}
+
+@media (min-device-width: 320px) {
+  .container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 5%;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  svg {
+    display: inline-block;
+    position: absolute;
+    height: 220px;
+    top: 0;
+    left: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: auto;
+    width: 85%;
+    max-height: 805px;
+  }
+
+  .logo {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 49px;
+    width: 40%;
+    z-index: 5;
+
+    color: #fff;
+  }
+  .wrappStorm {
+    width: 90%;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    z-index: 5;
+  }
+  .stormingFont {
+    font-family: "Montserrat", sans-serif;
+    font-style: bold;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+
+    color: #ffffff;
+  }
+
+  .desiredFont {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
+    z-index: 5;
+
+    color: #ffffff;
+  }
+
+  .wrappOur {
+    width: 100%;
+    margin-top: 20%;
+    padding: 10%;
+    z-index: 5;
+  }
+
+  .ourFont {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
+
+    color: #1a1a1a;
+  }
+
+  .wrappBtnStat {
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .btnStat {
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+    color: #fff;
+    background-color: #3a80ba;
+    width: 50%;
+    height: 200%;
+    border: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    line-height: 142%;
+    z-index: 5;
+  }
+  .btnStat:focus {
+    outline: none;
+    z-index: 5;
+  }
+
+  .wrappSmall {
+    width: 100%;
+    text-align: center;
+    padding: 10%;
+    z-index: 5;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #1a1a1a;
+  }
+
+  .wrappProj {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #1a1a1a;
+  }
+}

@@ -1,4 +1,4 @@
 export default {
-  PAGE: "/api/pages",
-  NUM: "/api/pages?num=1"
+  PAGE: "/api/statistics",
+  NUM: "/api/statistics?num=1"
 };

@@ -2,22 +2,32 @@ import React, { Component } from "react";
 import styles from "./Counter.module.css";
 
 const {
-  // counter,
+  counter,
   listNum,
   slider_btn_left,
+  slider_btn_left_disable,
   slider_btn_right,
+  slider_btn_right_disable,
   arrow_right,
   arrow_left,
   boxCounter,
   arrow_left_disable,
-  arrow_right_disable
+  arrow_right_disable,
+  pageItem,
+  pageItemDisable,
+  disableCursorPointer,
+  liNum
 } = styles;
 
 class Counter extends Component {
   render() {
-    const { numPage, articles, onCounter, currentPage } = this.props;
-    console.log(numPage);
-    console.log(articles);
+    const {
+      numPage,
+      articles,
+      getPageName,
+      getCounter,
+      currentPage
+    } = this.props;
 
     let pages = [];
     if (articles) {
@@ -32,8 +42,10 @@ class Counter extends Component {
           <button
             type="button"
             name="left"
-            onClick={onCounter}
-            className={slider_btn_left}
+            onClick={getPageName}
+            className={
+              currentPage === 1 ? slider_btn_left_disable : slider_btn_left
+            }
             disabled={currentPage === 1}
           >
             <span
@@ -41,130 +53,80 @@ class Counter extends Component {
             ></span>
           </button>
           <div className={listNum}>
-            <nav aria-label="...">
-              <ul class="pagination pagination-lg">
-                <li
-                  class={
-                    currentPage !== pages[numPage + 1]
-                      ? "page-item disabled"
-                      : "page-item active"
-                  }
-                >
-                  <span class="page-link">
-                    {currentPage === articles ? articles : pages[numPage + 1]}
+            <nav className={counter}>
+              <ul className="pagination pagination-lg">
+                <li className={pageItem}>
+                  <span className={liNum}>
+                    {currentPage === articles ? articles : currentPage}
                   </span>
                 </li>
+
                 <li
-                  class={
-                    currentPage !== pages[numPage + 2]
-                      ? "page-item disabled"
-                      : "page-item active"
+                  type="button"
+                  className={
+                    numPage + 2 <= articles
+                      ? pageItemDisable
+                      : disableCursorPointer
                   }
+                  onClick={() => getCounter(numPage + 2)}
                 >
-                  <span class="page-link">{pages[numPage + 2]}</span>
+                  <span className={liNum}>{currentPage + 1}</span>
+                </li>
+
+                <li
+                  className={
+                    numPage + 3 <= articles
+                      ? pageItemDisable
+                      : disableCursorPointer
+                  }
+                  type="button"
+                  onClick={() => getCounter(numPage + 3)}
+                >
+                  <span className={liNum}>{currentPage + 2}</span>
                 </li>
                 <li
-                  class={
-                    currentPage !== pages[numPage + 3]
-                      ? "page-item disabled"
-                      : "page-item active"
+                  className={
+                    numPage + 4 <= articles
+                      ? pageItemDisable
+                      : disableCursorPointer
                   }
+                  type="button"
+                  onClick={() => getCounter(numPage + 4)}
                 >
-                  <span class="page-link">{pages[numPage + 3]}</span>
+                  <span className={liNum}>{currentPage + 3}</span>
                 </li>
                 <li
-                  class={
-                    currentPage !== pages[numPage + 4]
-                      ? "page-item disabled"
-                      : "page-item active"
+                  className={
+                    numPage + 5 <= articles
+                      ? pageItemDisable
+                      : disableCursorPointer
                   }
+                  type="button"
+                  onClick={() => getCounter(numPage + 5)}
                 >
-                  <span class="page-link">{pages[numPage + 4]}</span>
-                </li>
-                <li
-                  class={
-                    currentPage !== pages[numPage + 5]
-                      ? "page-item disabled"
-                      : "page-item active"
-                  }
-                >
-                  <span class="page-link">{pages[numPage + 5]}</span>
+                  <span className={liNum}>{currentPage + 4}</span>
                 </li>
               </ul>
             </nav>
           </div>
-          {/* <div>
-            <p className={counter}>
-              {numPage + 1}/{articles}
-            </p>
-          </div> */}
           <button
             type="button"
             name="right"
-            onClick={onCounter}
-            className={slider_btn_right}
+            onClick={getPageName}
+            className={
+              currentPage === articles
+                ? slider_btn_right_disable
+                : slider_btn_right
+            }
             disabled={currentPage === articles}
           >
             <span
               className={
-                currentPage === articles ? arrow_right_disable : arrow_right
+                currentPage + 4 >= articles ? arrow_right_disable : arrow_right
               }
             ></span>
           </button>
         </div>
-        {/* <div>
-          <nav aria-label="...">
-            <ul class="pagination pagination-lg">
-              <li
-                class={
-                  currentPage !== pages[numPage + 1]
-                    ? "page-item disabled"
-                    : "page-item active"
-                }
-              >
-                <span class="page-link">
-                  {currentPage === articles ? articles : pages[numPage + 1]}
-                </span>
-              </li>
-              <li
-                class={
-                  currentPage !== pages[numPage + 2]
-                    ? "page-item disabled"
-                    : "page-item active"
-                }
-              >
-                <span class="page-link">{pages[numPage + 2]}</span>
-              </li>
-              <li
-                class={
-                  currentPage !== pages[numPage + 3]
-                    ? "page-item disabled"
-                    : "page-item active"
-                }
-              >
-                <span class="page-link">{pages[numPage + 3]}</span>
-              </li>
-              <li
-                class={
-                  currentPage !== pages[numPage + 4]
-                    ? "page-item disabled"
-                    : "page-item active"
-                }
-              >
-                <span class="page-link">{pages[numPage + 4]}</span>
-              </li>
-              <li
-                class={
-                  currentPage !== pages[numPage + 5]
-                    ? "page-item disabled"
-                    : "page-item active"
-                }
-              >
-                <span class="page-link">{pages[numPage + 5]}</span>
-              </li>
-            </ul>
-          </nav>
-        </div> */}
       </>
     );
   }
